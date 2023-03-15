@@ -8,5 +8,4 @@ for character in data["results"][14:74]:
     name = character["name"]
     planet = character["origin"]["name"]
     episodes = character["episode"]
-    print(f"{name} ({planet}):")
-    print("\tЭпизоды:")
+    print(f"{name} {planet} {episodes}:")

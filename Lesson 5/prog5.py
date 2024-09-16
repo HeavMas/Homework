@@ -1,22 +1,20 @@
-#НЕДОДЕЛАЛ
-nums = []
-while True:
-    a = input()
-    if a == '':
-        break
-    nums.append(int(a))
-if len(nums) != 1:
+numsL = []
+num = int(input())
+numsL.append(num)
+while num != '':
+    num = input()
+    try:
+        numsL.append(int(num))
+    except:
+        pass
+if len(numsL) > 1:
     flag = True
-    for i in range(len(nums)):
-        try:
-            if nums[i] > nums[i + 1]:
-                flag = False
-        except:
-            pass
+    for i in range(1, len(numsL)):
+        if numsL[i - 1] > numsL[i]:
+            flag = False
     if flag == True:
-        print('Да')
+        print('ДА')
     else:
-        print('Нет')
+        print('НЕТ')
 else:
-    print('Нет')
-
+    print('НЕТ')
